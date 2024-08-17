@@ -13,6 +13,31 @@ html{
 body{
     margin:0
 }
+
+details {
+    user-select: none;
+  }
+  
+  details>summary span.icon {
+    width: auto;
+    height: auto;
+    transition: all 0.3s;
+    margin-left: auto;
+  }
+  
+  details[open] summary span.icon {
+    transform: rotate(180deg);
+  }
+  
+  summary {
+    display: flex;
+    cursor: pointer;
+  }
+  
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
  article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{
     display:block
 }
